@@ -12,6 +12,15 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Threads",
   description: "A Next.js 13 Meta Threads Application",
+  og: {
+    title: "Threads",
+    description: "A Next.js 13 Meta Threads Application",
+    type: "website",
+    url: "https://threads-ckt.vercel.app",
+    image: "https://threads-ckt.vercel.app/assets/logo.svg",
+    locale: "en_US",
+    site_name: "Threads",
+  },
 };
 
 export default function RootLayout({
