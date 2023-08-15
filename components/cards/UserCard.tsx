@@ -10,8 +10,8 @@ interface Props {
   name: string;
   username: string;
   image: string;
-  bio: string;
   personType: string;
+  hasBorders?: boolean;
 }
 
 const UserCard = ({
@@ -20,13 +20,17 @@ const UserCard = ({
   name,
   username,
   image,
-  bio,
   personType,
+  hasBorders,
 }: Props) => {
   const router = useRouter();
 
   return (
-    <article className="user-card">
+    <article
+      className={`user-card ${
+        hasBorders && "  px-4 py-5 border rounded-lg  border-gray-800"
+      }`}
+    >
       <div className="user-card_avatar">
         <Image
           src={image}
@@ -41,7 +45,8 @@ const UserCard = ({
         </div>
       </div>
       <Button
-        className="user-card_btn"
+        className="btn-outlined-primary"
+        size={"sm"}
         onClick={() => router.push(`/profile/${id}`)}
       >
         View

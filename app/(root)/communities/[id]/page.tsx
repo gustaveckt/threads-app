@@ -64,7 +64,6 @@ const Page = async ({ params }: { params: { id: string } }) => {
                   id={member.id}
                   name={member.name}
                   image={member.image}
-                  bio={member.bio}
                   username={member.username}
                   personType="User"
                 />
